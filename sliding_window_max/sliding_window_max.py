@@ -4,8 +4,22 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    resArr = []
+    windowArr = []
+    index = 0
+    for i in range(len(arr)):
+        windowArr = []
+        index = i
+        while(len(windowArr) is not k):
+            print(f"index is: {index}")
+            windowArr.append(nums[index])
+            index += 1
+        resArr.append(max(windowArr))
+        if windowArr[len(windowArr) - 1] is nums[len(nums) - 1]:
+            break
 
-    pass
+
+    return resArr
 
 
 if __name__ == '__main__':
